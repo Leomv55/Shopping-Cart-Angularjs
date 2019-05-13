@@ -1,18 +1,18 @@
 <div ng-controller="CartController">
     <p>
-        <h3 class="ml-3 mb-3">Cart<span class="text-muted ml-2 cart-total mr-2">Total: ₹ {{total}}</span></h3> 
+        <h3 class="ml-3 mb-3">Cart<span class="text-muted ml-2 cart-total mr-2">Total: ₹ {{$root.total}}</span></h3> 
      </p>
      <div class="alert alert-light" role="alert" ng-if="cart.length == 0">
           Cart is empty
         </div>
-           <div class="ml-1 mt-2 mr-1 card" ng-repeat="product in cart track by $index">
+           <div class="ml-1 mt-2 mr-1 card" ng-repeat="product in $root.cart track by $index">
                    <div class="card-body">
                      <img class="card-image-custom ml-0 mr-1" src="{{product.image}}" width=60px height="100px" alt="Img Placeholder" >
                      <div class="card-title-price">
                         <h5 class="card-title">{{product.name}}</h5>
                       <p class="card-text"><span class="card-item-price">₹ {{product.price}}</span></p>
                     </div>
-                      <a  class="delete-icon" ng-click="delCartItem(cart.indexOf(product))">
+                      <a href="" class="delete-icon" ng-click="delCartItem(cart.indexOf(product))">
                           <i class="material-icons">
                               delete
                               </i>

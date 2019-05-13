@@ -12,9 +12,10 @@ app.config(['$routeProvider',function ($routeProvider) {
     .otherwise('/');
 }
 ]);
-var cartList=[];
-var total=0;
-app.controller('ProductController',['$scope',function($scope){
+
+app.controller('ProductController',['$scope',"$rootScope",function($scope,$rootScope){
+    $rootScope.cart=[];
+    $rootScope.total=0;
     $scope.products=[
         {
         "image":"public/images/iphone.jpg",
@@ -33,17 +34,15 @@ app.controller('ProductController',['$scope',function($scope){
         }
     ];
     $scope.addToCart=function(product){
-        total+=product.price;
-        cartList.push(product);
+        $rootScope.total+=product.price;
+        $rootScope.cart.push(product);
         console.log(cartList);
     };
 }]);
-app.controller('CartController',['$scope',function($scope){
-    $scope.cart=cartList;
-    $scope.total=total;
+app.controller('CartController',['$scope','$rootScope',function($scope,$rootScope){
     $scope.delCartItem=function(index) {
-      $scope.total-=$scope.cart[index].price;
-      cartList.splice(index,1);
+      $rootScope.total-=$scope.cart[index].price;
+      $rootScope.cart.splice(index,1);
     };
 }]);
 
