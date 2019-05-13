@@ -27,5 +27,24 @@
   float: left;
 }
 .card-item-price{
-  color: red;
+  color: lightcoral;
+}
+.cart-total{
+  font-size: 1.2rem ;
+  float: right;
+
+}
+.alert{
+  vertical-align: -webkit-baseline-middle;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.delete-icon{
+  color: lightslategray;
+}
+.card-title-price > h5{
+  margin-bottom: 0px;
+}
+.card-title-price{
+  padding-top: 10px;
 }
