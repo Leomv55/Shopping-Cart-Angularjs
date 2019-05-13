@@ -13,12 +13,12 @@ app.config(['$routeProvider',function ($routeProvider) {
 }
 ]);
 var cartList=[{
-    "image":"public/nokia21.jpg",
+    "image":"public/images/nokia21.jpg",
     "name":"Nokia 21",
     "price":43000.00
     },
     {
-        "image":"public/samsung.jpg",
+        "image":"public/images/samsung.jpg",
         "name":"Samsung mA",
         "price":54000.00
         }
@@ -28,17 +28,17 @@ app.controller('ProductController',['$scope',function($scope){
     debugger;
     $scope.products=[
         {
-        "image":"public/iphone.jpg",
+        "image":"public/images/iphone.jpg",
         "name":"IPhone 10x",
         "price":73999.00
         },
         {
-        "image":"public/samsung.jpg",
+        "image":"public/images/samsung.jpg",
         "name":"Samsung mA",
         "price":54000.00
         },
         {
-        "image":"public/nokia21.jpg",
+        "image":"public/images/nokia21.jpg",
         "name":"Nokia 21",
         "price":43000.00
         }
@@ -49,7 +49,6 @@ app.controller('ProductController',['$scope',function($scope){
     };
 }]);
 app.controller('CartController',['$scope',function($scope){
-    console.log("--------");
     $scope.cart=cartList;
 }]);
 
