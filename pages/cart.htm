@@ -1,15 +1,17 @@
-<div>
+<div ng-controller="CartController">
     <p>
-        <h3 class="ml-4 ml-3 mb-3">Cart</h3> 
+        <h3 class="ml-3 mb-3">Cart</h3> 
      </p>
-     <div ng-controller="CartController">
-           <div class="card w-75" ng-repeat="product in cart">
+    
+           <div class="ml-1 mt-2 mr-1 card" ng-repeat="product in cart track by $index">
                    <div class="card-body">
-                     <h5 class="card-title">{{product.name}}</h5>
-                     <p class="card-text">{{product.price}}</p>
-                     <a href="#" class="btn btn-primary">Button</a>
+                     <img class="card-image-custom" src="{{product.image}}" width=60px height="80px" alt="Img Placeholder" >
+                     <div class="card-title-price">
+                        <h5 class="card-title">{{product.name}}</h5>
+                     <p class="card-text"><span class="card-item-price">₹ {{product.price}}</span></p>
+                     </div>
+                     
                    </div>
                  </div>
-     </div>  
 </div>
         

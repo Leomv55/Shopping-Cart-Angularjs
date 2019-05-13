@@ -23,3 +23,9 @@
       min-width: 10%;
     }
 }
+.card-image-custom{
+  float: left;
+}
+.card-item-price{
+  color: red;
+}

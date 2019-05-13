@@ -1,20 +1,28 @@
 var app=angular.module('aloha',["ngRoute"]);
 app.config(['$routeProvider',function ($routeProvider) {
     $routeProvider
-    .when("/",{
+    .when('/',{
         templateUrl:"../../pages/home.htm",
         controller:"ProductController"
     })
-    .when("cart/",{
+    .when('/cart',{
         templateUrl: "../../pages/cart.htm",
         controller:"CartController"
     })
-    .otherwise({
-        redirectTo:"/"
-    });
+    .otherwise('/');
 }
 ]);
-var cartList=[];
+var cartList=[{
+    "image":"public/nokia21.jpg",
+    "name":"Nokia 21",
+    "price":43000.00
+    },
+    {
+        "image":"public/samsung.jpg",
+        "name":"Samsung mA",
+        "price":54000.00
+        }
+];
 
 app.controller('ProductController',['$scope',function($scope){
     debugger;
@@ -26,7 +34,7 @@ app.controller('ProductController',['$scope',function($scope){
         },
         {
         "image":"public/samsung.jpg",
-        "name":"Samsung 21",
+        "name":"Samsung mA",
         "price":54000.00
         },
         {
@@ -41,5 +49,7 @@ app.controller('ProductController',['$scope',function($scope){
     };
 }]);
 app.controller('CartController',['$scope',function($scope){
+    console.log("--------");
     $scope.cart=cartList;
 }]);
+
