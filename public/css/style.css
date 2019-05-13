@@ -1,0 +1,25 @@
+.btn-position{
+    float: right !important;
+}
+@media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+    .img-responsive {
+      min-width: 70%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* start of medium tablet styles */
+    /* Adding a fixed/percentage min-width could ensure that the image doesn't get too small */
+    .img-responsive {
+      min-width: 30%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    /* start of phone styles */
+    /* It's possible to hide the image if the screen becomes too small */
+    .img-responsive {
+      min-width: 10%;
+    }
+}

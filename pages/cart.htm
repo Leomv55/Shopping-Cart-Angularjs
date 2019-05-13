@@ -1,0 +1,15 @@
+<div>
+    <p>
+        <h3 class="ml-4 ml-3 mb-3">Cart</h3> 
+     </p>
+     <div ng-controller="CartController">
+           <div class="card w-75" ng-repeat="product in cart">
+                   <div class="card-body">
+                     <h5 class="card-title">{{product.name}}</h5>
+                     <p class="card-text">{{product.price}}</p>
+                     <a href="#" class="btn btn-primary">Button</a>
+                   </div>
+                 </div>
+     </div>  
+</div>
+        

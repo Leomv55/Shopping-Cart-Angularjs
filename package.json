@@ -1,0 +1,21 @@
+{
+  "name": "shopping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "angular-route": "^1.7.8",
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.5",
+    "express": "^4.16.4",
+    "jquery": "^3.4.1",
+    "lite-server": "^2.4.0",
+    "popper": "^1.0.1"
+  }
+}
